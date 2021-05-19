@@ -24,16 +24,16 @@ pip install flask_sqlalchemy
 
 ### Anasayfa
 
-![Test Image 1](https://github.com/EnesBasarkan/meetingOrganizer/blob/master/static/index.png)
+![anasayfa](/static/index.png)
 
 ### Toplantı Ekleme 
 
-![Test Image 2](https://github.com/EnesBasarkan/meetingOrganizer/blob/master/static/add.png)
+![ekleme](/static/add.png)
 
 ### Toplantı Güncelleme 
 
-![Test Image 3](https://github.com/EnesBasarkan/meetingOrganizer/blob/master/static/edit.png)
+![guncelleme](/static/edit.png)
 
 ### Toplantı Silme
 
-![Test Image 4](https://github.com/EnesBasarkan/meetingOrganizer/blob/master/static/delete.png)
+![silme](/static/delete.png)
