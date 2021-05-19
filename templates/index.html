@@ -76,3 +76,240 @@
                         </td>
  
                     </tr>
+
+                             <!-- Modal Edit Meet-->
+<div id="modaledit{{row.id}}" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+  
+       <div class="modal-content">
+  
+  
+          <div class="modal-header">
+  
+  
+             <h4 class="modal-title">Update Information</h4>
+  
+  
+          </div>
+  
+  
+          <div class="modal-body">
+  
+  
+             <form action="{{url_for('update')}}" method="POST">
+  
+  
+                <div class="form-group">
+  
+  
+                   <label>Subject:</label>
+                    <input type="hidden"  name="id" value="{{row.id}}">
+  
+                   <input type="text" class="form-control" name="subject" value="{{row.subject}}">
+  
+  
+                </div>
+  
+  
+  
+                <div class="form-group">
+  
+  
+                   <label>Date:</label>
+  
+                   <input type="text" class="form-control" name="date" value="{{row.date}}">
+  
+  
+                </div>
+  
+  
+                <div class="form-group">
+  
+  
+                   <label>Start Time:</label>
+  
+                   <input type="text" class="form-control" name="start_time" value="{{row.start_time}}">
+  
+  
+                </div>
+                
+                <div class="form-group">
+  
+  
+                 <label>End Time:</label>
+ 
+                 <input type="text" class="form-control" name="end_time" value="{{row.end_time}}">
+ 
+ 
+              </div>
+ 
+              <div class="form-group">
+  
+  
+                 <label>Participants:</label>
+ 
+                 <input type="text" class="form-control" name="participants" value="{{row.participants}}">
+ 
+ 
+              </div>
+  
+                <div class="form-group">
+  
+  
+                   <button class="btn btn-primary" type="submit">Update</button>
+  
+  
+                </div>
+  
+  
+             </form>
+  
+  
+          </div>
+  
+  
+          <div class="modal-footer">
+  
+  
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  
+  
+          </div>
+  
+  
+       </div>
+  
+  
+    </div>
+  
+ </div>
+  
+  
+                     {% endfor %}
+
+
+
+                    </table>
+ 
+ 
+                </div>
+     
+     
+     
+                      <!-- Modal Add Meet-->
+     
+     
+    <div id="mymodal" class="modal fade" role="dialog">
+       <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+     
+                <h4 class="modal-title">Add Meet</h4>
+             </div>
+             <div class="modal-body">
+     
+                <form action="{{url_for('insert')}}" method="POST">
+     
+     
+                    <div class="form-group">
+     
+     
+                        <label>Subject:</label>
+       
+                        <input type="text" class="form-control" name="subject" required="1">
+       
+       
+                     </div>
+       
+       
+       
+                     <div class="form-group">
+       
+       
+                        <label>Date:</label>
+       
+                        <input type="text" class="form-control" name="date" required="1">
+       
+       
+                     </div>
+       
+       
+                     <div class="form-group">
+       
+       
+                        <label>Start Time:</label>
+       
+                        <input type="text" class="form-control" name="start_time" required="1">
+       
+       
+                     </div>
+                     
+                     <div class="form-group">
+       
+       
+                      <label>End Time:</label>
+      
+                      <input type="text" class="form-control" name="end_time" required="1">
+      
+      
+                   </div>
+      
+                   <div class="form-group">
+       
+       
+                      <label>Participants:</label>
+      
+                      <input type="text" class="form-control" name="participants" required="1">
+      
+      
+                   </div>
+       
+                   
+     
+     
+                   <div class="form-group">
+     
+     
+                      <button class="btn btn-primary" type="submit">Add Meet</button>
+     
+     
+                   </div>
+     
+     
+                </form>
+     
+     
+             </div>
+     
+     
+             <div class="modal-footer">
+     
+     
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     
+     
+             </div>
+     
+     
+          </div>
+     
+     
+       </div>
+     
+     
+    </div>
+     
+     
+     
+     
+     
+            </div>
+     
+        </div>
+     
+     
+    </div>
+     
+     
+    {% endblock %}

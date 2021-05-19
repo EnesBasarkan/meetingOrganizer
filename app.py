@@ -33,3 +33,25 @@ class Data(db.Model):
 def Index():
     all_data = Data.query.all()
     return render_template("index.html", meets = all_data)
+
+
+#This route is for inserting data 
+@app.route('/insert', methods = ['POST'])
+def insert():
+ 
+    if request.method == 'POST':
+ 
+        subject =request.form['subject']
+        date = request.form['date']
+        start_time =request.form['start_time']
+        end_time =request.form['end_time']
+        participants =request.form['participants']
+ 
+        my_data = Data(subject, date, start_time,end_time,participants)
+        db.session.add(my_data)
+        db.session.commit()
+ 
+        flash("Meet Inserted Successfully")
+ 
+        return redirect(url_for('Index'))
+ 
